@@ -1,1 +1,501 @@
-<h1> Helo World </h1>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Om Parmar | IT Student</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #020617;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        nav h2 {
+            color: #38bdf8;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #cbd5e1;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .hero h1 span {
+            color: #38bdf8;
+        }
+
+        .hero h2 {
+            color: #94a3b8;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #020617;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            margin: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #7dd3fc;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+        }
+
+        /* COMMON SECTION */
+        section {
+            padding: 80px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #38bdf8;
+        }
+
+        /* ABOUT */
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            color: #cbd5e1;
+        }
+
+        /* SKILLS */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+            background: #263449;
+        }
+
+        .skill h3 {
+            color: #f8fafc;
+            margin-bottom: 8px;
+        }
+
+        .skill p {
+            color: #94a3b8;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .project {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #334155;
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .project h3 {
+            color: #f8fafc;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #94a3b8;
+        }
+
+        /* EDUCATION */
+        .education {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .education-card {
+            background: #1e293b;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #38bdf8;
+            border-radius: 8px;
+        }
+
+        .education-card h3 {
+            color: white;
+        }
+
+        .education-card p {
+            color: #94a3b8;
+        }
+
+        /* CONTACT */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 10px 0;
+            color: #cbd5e1;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #64748b;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2>Om Parmar</h2>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Hi, I'm <span>Om Parmar</span></h1>
+
+            <h2>IT Student | Developer | Future Entrepreneur</h2>
+
+            <p>
+                I'm a second-year Information Technology student passionate
+                about technology, programming, web development and building
+                real-world projects.
+            </p>
+
+            <a href="#projects" class="btn">View My Projects</a>
+
+            <a href="#contact" class="btn btn-outline">Contact Me</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about">
+
+            <p>
+                I am an Information Technology student who enjoys learning
+                programming and exploring how technology can solve real-world
+                problems.
+            </p>
+
+            <br>
+
+            <p>
+                Currently, I am developing my skills in Java, C, HTML, CSS,
+                JavaScript, DSA and DBMS. My long-term goal is to build
+                innovative technology products and eventually create my own
+                company.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Web Structure</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Web Design</p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Interactive Websites</p>
+            </div>
+
+            <div class="skill">
+                <h3>Java</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill">
+                <h3>C</h3>
+                <p>Data Structures</p>
+            </div>
+
+            <div class="skill">
+                <h3>DBMS</h3>
+                <p>Database Management</p>
+            </div>
+
+            <div class="skill">
+                <h3>DSA</h3>
+                <p>Problem Solving</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>DOM Calculator</h3>
+                <p>
+                    A calculator created using HTML, CSS and JavaScript
+                    with DOM manipulation.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Java Number Guessing Game</h3>
+                <p>
+                    A Java-based game where the user tries to guess a randomly
+                    generated number.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Personal Portfolio</h3>
+                <p>
+                    A responsive personal profile website built using
+                    HTML and CSS.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Future AI Project</h3>
+                <p>
+                    Currently exploring ideas for an AI-based project that
+                    solves a practical real-world problem.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education">
+
+            <div class="education-card">
+
+                <h3>Information Technology</h3>
+
+                <p>
+                    Thakur College
+                </p>
+
+                <p>
+                    Currently pursuing Second Year
+                </p>
+
+            </div>
+
+            <div class="education-card">
+
+                <h3>Current Focus</h3>
+
+                <p>
+                    Java • DSA • Web Development • DBMS • Digital Circuit Design
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <div class="contact">
+
+            <p>📧 Email: your-email@example.com</p>
+
+            <p>📱 Phone: +91 XXXXX XXXXX</p>
+
+            <p>📍 Mumbai, India</p>
+
+            <br>
+
+            <a href="mailto:your-email@example.com" class="btn">
+                Send Email
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 Om Parmar. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        console.log("Welcome to Om Parmar's Profile!");
+
+    </script>
+
+</body>
+</html>
+```
